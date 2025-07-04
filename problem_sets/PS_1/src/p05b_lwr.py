@@ -36,7 +36,7 @@ def main(tau, train_path, eval_path):
     plt.plot(x_eval, y_pred, 'ro', linewidth=2)
     plt.xlabel('x')
     plt.ylabel('y')
-    plt.savefig('output/p05b.png')
+    plt.savefig('/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/output/p05b.png')
     # *** END CODE HERE ***
 
 
@@ -81,3 +81,5 @@ class LocallyWeightedLinearRegression(LinearModel):
             y_pred[i] = np.linalg.inv(self.x.T.dot(W).dot(self.x)).dot(self.x.T).dot(W).dot(self.y).T.dot(x[i])
         return y_pred
         # *** END CODE HERE ***
+
+main(tau=0.5, train_path='/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/data/ds5_train.csv', eval_path='/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/data/ds5_valid.csv')
