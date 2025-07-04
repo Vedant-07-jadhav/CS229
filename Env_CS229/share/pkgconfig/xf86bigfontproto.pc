@@ -1,7 +1,0 @@
-prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
-includedir=${prefix}/include
- 
-Name: XF86BigFontProto
-Description: XF86BigFont extension headers
-Version: 1.2.0
-Cflags: -I${includedir}

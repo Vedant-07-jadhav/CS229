@@ -1,5 +1,0 @@
-#ifndef QT_QTQMLBUILTINS_MODULE_H
-#define QT_QTQMLBUILTINS_MODULE_H
-#include <QtQmlBuiltins/QtQmlBuiltinsDepends>
-#include "qtqmlbuiltinsversion.h"
-#endif

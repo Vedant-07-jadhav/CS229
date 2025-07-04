@@ -1,7 +1,0 @@
-prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
-includedir=${prefix}/include
- 
-Name: KBProto
-Description: KB extension headers
-Version: 1.0.7
-Cflags: -I${includedir}

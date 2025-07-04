@@ -1,7 +1,0 @@
-prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
-includedir=${prefix}/include
- 
-Name: DMXProto
-Description: DMX extension headers
-Version: 2.3.1
-Cflags: -I${includedir}
