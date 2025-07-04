@@ -1,0 +1,14 @@
+prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
+exec_prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
+libdir=/home/vedant/Codes&Projects/CS229/Env_CS229/lib
+includedir=/home/vedant/Codes&Projects/CS229/Env_CS229/include
+
+Name: FreeType 2
+URL: https://freetype.org
+Description: A free, high-quality, and portable font engine.
+Version: 26.2.20
+Requires: 
+Requires.private: zlib, libpng
+Libs: -L/home/vedant/Codes&Projects/CS229/Env_CS229/lib -lfreetype
+Libs.private: 
+Cflags: -I${includedir}/freetype2

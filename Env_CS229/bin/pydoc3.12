@@ -1,0 +1,5 @@
+#!/home/vedant/Codes&Projects/CS229/Env_CS229/bin/python3.12
+
+import pydoc
+if __name__ == '__main__':
+    pydoc.cli()

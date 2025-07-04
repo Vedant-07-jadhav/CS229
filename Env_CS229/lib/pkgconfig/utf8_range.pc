@@ -1,0 +1,11 @@
+prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
+exec_prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
+libdir=/home/vedant/Codes&Projects/CS229/Env_CS229/lib
+includedir=/home/vedant/Codes&Projects/CS229/Env_CS229/include
+
+Name: UTF8 Range
+Description: Google's UTF8 Library
+Version: 1.0
+Requires: absl_strings
+Libs: -L${libdir} -lutf8_validity -lutf8_range -lpthread
+Cflags: -I${includedir}

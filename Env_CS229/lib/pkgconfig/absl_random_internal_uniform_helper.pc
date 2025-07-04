@@ -1,0 +1,12 @@
+prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
+exec_prefix=${prefix}
+libdir=/home/vedant/Codes&Projects/CS229/Env_CS229/lib
+includedir=/home/vedant/Codes&Projects/CS229/Env_CS229/include
+
+Name: absl_random_internal_uniform_helper
+Description: Abseil random_internal_uniform_helper library
+URL: https://abseil.io/
+Version: 20250127
+Requires: absl_config = 20250127, absl_random_internal_traits = 20250127, absl_type_traits = 20250127
+Libs: -L${libdir}  
+Cflags: -I${includedir} -DNOMINMAX

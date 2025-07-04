@@ -1,0 +1,12 @@
+prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
+exec_prefix=${prefix}
+libdir=/home/vedant/Codes&Projects/CS229/Env_CS229/lib
+includedir=/home/vedant/Codes&Projects/CS229/Env_CS229/include
+
+Name: absl_crc_cpu_detect
+Description: Abseil crc_cpu_detect library
+URL: https://abseil.io/
+Version: 20250127
+Requires: absl_base = 20250127, absl_config = 20250127, absl_optional = 20250127
+Libs: -L${libdir}  -labsl_crc_cpu_detect 
+Cflags: -I${includedir} -DNOMINMAX

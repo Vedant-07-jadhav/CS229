@@ -1,0 +1,14 @@
+prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libpgtypes
+Description: PostgreSQL libpgtypes library
+URL: https://www.postgresql.org/
+Version: 17.4
+Requires: 
+Requires.private: 
+Cflags: -I${includedir}
+Libs: -L${libdir} -lpgtypes
+Libs.private: -L/home/vedant/Codes&Projects/CS229/Env_CS229/lib -lpgcommon -lpgport -lm

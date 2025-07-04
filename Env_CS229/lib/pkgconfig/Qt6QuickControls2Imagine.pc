@@ -1,0 +1,12 @@
+prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
+exec_prefix=${prefix}
+bindir=${prefix}/lib/qt6/bin
+libexecdir=${prefix}/lib/qt6
+libdir=${prefix}/lib
+includedir=${prefix}/include/qt6
+
+Name: Qt6 QuickControls2Imagine
+Description: Qt QuickControls2Imagine module
+Version: 6.7.3
+Libs: -L${libdir} -lQt6QuickControls2Imagine
+Cflags: -I${includedir}/QtQuickControls2Imagine -I${includedir} -DQT_QUICKCONTROLS2IMAGINE_LIB

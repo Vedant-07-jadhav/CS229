@@ -1,0 +1,136 @@
+{
+  "build": "h5eee18b_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "libxcb >=1.17.0,<2.0a0"
+  ],
+  "extracted_package_dir": "/home/vedant/anaconda3/pkgs/xcb-util-0.4.1-h5eee18b_2",
+  "files": [
+    "include/xcb/xcb_atom.h",
+    "include/xcb/xcb_aux.h",
+    "include/xcb/xcb_event.h",
+    "include/xcb/xcb_util.h",
+    "lib/libxcb-util.a",
+    "lib/libxcb-util.so",
+    "lib/libxcb-util.so.1",
+    "lib/libxcb-util.so.1.0.0",
+    "lib/pkgconfig/xcb-atom.pc",
+    "lib/pkgconfig/xcb-aux.pc",
+    "lib/pkgconfig/xcb-event.pc",
+    "lib/pkgconfig/xcb-util.pc"
+  ],
+  "fn": "xcb-util-0.4.1-h5eee18b_2.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/vedant/anaconda3/pkgs/xcb-util-0.4.1-h5eee18b_2",
+    "type": 1
+  },
+  "md5": "7ec0d47a4acda67329d5c747516b1f8b",
+  "name": "xcb-util",
+  "package_tarball_full_path": "/home/vedant/anaconda3/pkgs/xcb-util-0.4.1-h5eee18b_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/xcb/xcb_atom.h",
+        "path_type": "hardlink",
+        "sha256": "668135ed7ed0da0e87f4bc97320bc6a0cdbe42bbca41bd81f623ac539c8de609",
+        "sha256_in_prefix": "668135ed7ed0da0e87f4bc97320bc6a0cdbe42bbca41bd81f623ac539c8de609",
+        "size_in_bytes": 361
+      },
+      {
+        "_path": "include/xcb/xcb_aux.h",
+        "path_type": "hardlink",
+        "sha256": "8e174c39d5dcc7ccb7b6e38938a37897746666ceb8ab7df89a71b8bcb942025f",
+        "sha256_in_prefix": "8e174c39d5dcc7ccb7b6e38938a37897746666ceb8ab7df89a71b8bcb942025f",
+        "size_in_bytes": 6832
+      },
+      {
+        "_path": "include/xcb/xcb_event.h",
+        "path_type": "hardlink",
+        "sha256": "a29545f9f254904e4623b622d08f10a2950940344694e7e9fdbd85b5bed88503",
+        "sha256_in_prefix": "a29545f9f254904e4623b622d08f10a2950940344694e7e9fdbd85b5bed88503",
+        "size_in_bytes": 3000
+      },
+      {
+        "_path": "include/xcb/xcb_util.h",
+        "path_type": "hardlink",
+        "sha256": "d9ada3243b135069328498f049983a300598129b6312963c051b7ea8eb9f0b46",
+        "sha256_in_prefix": "d9ada3243b135069328498f049983a300598129b6312963c051b7ea8eb9f0b46",
+        "size_in_bytes": 154
+      },
+      {
+        "_path": "lib/libxcb-util.a",
+        "path_type": "hardlink",
+        "sha256": "ec2206f6e78e0514420b71e36a9b817315e88e80f8455cfba65c7a26f54019ca",
+        "sha256_in_prefix": "ec2206f6e78e0514420b71e36a9b817315e88e80f8455cfba65c7a26f54019ca",
+        "size_in_bytes": 27318
+      },
+      {
+        "_path": "lib/libxcb-util.so",
+        "path_type": "softlink",
+        "sha256": "edd1271685cd845de92b2de7a917edbd05fd7498d084fa10ad7a6042a7510b73",
+        "size_in_bytes": 30280
+      },
+      {
+        "_path": "lib/libxcb-util.so.1",
+        "path_type": "softlink",
+        "sha256": "edd1271685cd845de92b2de7a917edbd05fd7498d084fa10ad7a6042a7510b73",
+        "size_in_bytes": 30280
+      },
+      {
+        "_path": "lib/libxcb-util.so.1.0.0",
+        "path_type": "hardlink",
+        "sha256": "edd1271685cd845de92b2de7a917edbd05fd7498d084fa10ad7a6042a7510b73",
+        "sha256_in_prefix": "edd1271685cd845de92b2de7a917edbd05fd7498d084fa10ad7a6042a7510b73",
+        "size_in_bytes": 30280
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-atom.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/croot/xcb-util_1746023060436/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "ef87ccd22a2c542b76a83f672c0536b3754099694736f5f50fcc37d5d1984b01",
+        "sha256_in_prefix": "8fd0d506de2f859f3850fd427e7c93f908d8549f30cccf9d156359f7b66fba88",
+        "size_in_bytes": 474
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-aux.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/croot/xcb-util_1746023060436/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "7bbed1ecb7e1fb53a6addb6bd2d7fdfc2dbf0f942085915baa88dc2a4ef557ac",
+        "sha256_in_prefix": "5cad8d976a5fbeefd4885c5b6805b8501fc48f8de6bd74ee291026ce7fa29fbf",
+        "size_in_bytes": 483
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-event.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/croot/xcb-util_1746023060436/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "bf3ab1a88bf33f0b72137bbfd943f538f68452de096f1f948a6f2cfe8e06a622",
+        "sha256_in_prefix": "e05ec2fb0e216de00b55e7125b7bfacc6b7f831a52e1707676a54667c5f30591",
+        "size_in_bytes": 489
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-util.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/croot/xcb-util_1746023060436/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "901e506b4acb9608181fbd552884a563cbdacde1b9f98ed9bb419d1d09d8fca9",
+        "sha256_in_prefix": "2a8364cdc1fb31703e595d6e8e132f30a8c87bdf9b88b7bf8cc2ae83dfe0fcc7",
+        "size_in_bytes": 488
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "951c811db4a696a03b368631f68a4d8534aea310a52f71eb9c4e1b6cf342cb3a",
+  "size": 19013,
+  "subdir": "linux-64",
+  "timestamp": 1746023086000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/xcb-util-0.4.1-h5eee18b_2.conda",
+  "version": "0.4.1"
+}

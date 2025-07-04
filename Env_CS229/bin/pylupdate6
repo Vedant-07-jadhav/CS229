@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /home/vedant/Codes&Projects/CS229/Env_CS229/bin/python -m PyQt6.lupdate.pylupdate ${1+"$@"}

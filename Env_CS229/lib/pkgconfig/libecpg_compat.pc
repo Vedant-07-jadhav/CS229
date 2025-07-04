@@ -1,0 +1,14 @@
+prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libecpg_compat
+Description: PostgreSQL libecpg_compat library
+URL: https://www.postgresql.org/
+Version: 17.4
+Requires: 
+Requires.private: libecpg, libpgtypes
+Cflags: -I${includedir}
+Libs: -L${libdir} -lecpg_compat
+Libs.private: -L/home/vedant/Codes&Projects/CS229/Env_CS229/lib -lecpg -lpgcommon -lpgport -lpq -lm

@@ -1,0 +1,12 @@
+prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
+exec_prefix=${prefix}
+libdir=/home/vedant/Codes&Projects/CS229/Env_CS229/lib
+includedir=/home/vedant/Codes&Projects/CS229/Env_CS229/include
+
+Name: absl_time_zone
+Description: Abseil time_zone library
+URL: https://abseil.io/
+Version: 20250127
+Requires:
+Libs: -L${libdir}  -labsl_time_zone 
+Cflags: -I${includedir} -DNOMINMAX

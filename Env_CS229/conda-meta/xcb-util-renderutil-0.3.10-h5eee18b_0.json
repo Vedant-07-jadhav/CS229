@@ -1,0 +1,82 @@
+{
+  "build": "h5eee18b_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "libxcb >=1.17.0,<2.0a0"
+  ],
+  "extracted_package_dir": "/home/vedant/anaconda3/pkgs/xcb-util-renderutil-0.3.10-h5eee18b_0",
+  "files": [
+    "include/xcb/xcb_renderutil.h",
+    "lib/libxcb-render-util.a",
+    "lib/libxcb-render-util.so",
+    "lib/libxcb-render-util.so.0",
+    "lib/libxcb-render-util.so.0.0.0",
+    "lib/pkgconfig/xcb-renderutil.pc"
+  ],
+  "fn": "xcb-util-renderutil-0.3.10-h5eee18b_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/vedant/anaconda3/pkgs/xcb-util-renderutil-0.3.10-h5eee18b_0",
+    "type": 1
+  },
+  "md5": "2cfefd0578954d74fb358151a78e803b",
+  "name": "xcb-util-renderutil",
+  "package_tarball_full_path": "/home/vedant/anaconda3/pkgs/xcb-util-renderutil-0.3.10-h5eee18b_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/xcb/xcb_renderutil.h",
+        "path_type": "hardlink",
+        "sha256": "d103fff980ab6f7dc4fefc681cf8d0b773f06ee71c2c67c83445c010ff388ffc",
+        "sha256_in_prefix": "d103fff980ab6f7dc4fefc681cf8d0b773f06ee71c2c67c83445c010ff388ffc",
+        "size_in_bytes": 4735
+      },
+      {
+        "_path": "lib/libxcb-render-util.a",
+        "path_type": "hardlink",
+        "sha256": "1495c672015481f0eae881545c191aa1d18f302f6578c60d9602b55c33ccc5f6",
+        "sha256_in_prefix": "1495c672015481f0eae881545c191aa1d18f302f6578c60d9602b55c33ccc5f6",
+        "size_in_bytes": 17044
+      },
+      {
+        "_path": "lib/libxcb-render-util.so",
+        "path_type": "softlink",
+        "sha256": "fcf60a0ba0132f49cc6f528597257e301aed592261ca0807b83cc3599cc1231f",
+        "size_in_bytes": 22312
+      },
+      {
+        "_path": "lib/libxcb-render-util.so.0",
+        "path_type": "softlink",
+        "sha256": "fcf60a0ba0132f49cc6f528597257e301aed592261ca0807b83cc3599cc1231f",
+        "size_in_bytes": 22312
+      },
+      {
+        "_path": "lib/libxcb-render-util.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "fcf60a0ba0132f49cc6f528597257e301aed592261ca0807b83cc3599cc1231f",
+        "sha256_in_prefix": "fcf60a0ba0132f49cc6f528597257e301aed592261ca0807b83cc3599cc1231f",
+        "size_in_bytes": 22312
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-renderutil.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/croot/xcb-util-renderutil_1746022689183/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
+        "sha256": "ecdb5457d4ab3fa39c479d3325bea22ca50451e0bdf0f3a3462b62f614ae1fdc",
+        "sha256_in_prefix": "dff306d6cef8f47336af650144b014c3ed20181bea24c987e62cd0204af95069",
+        "size_in_bytes": 524
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "0303568fd5e433dafef67afc46cef3d30cb2bf0cb78b2f960b16d03b8ac6a8fa",
+  "size": 16067,
+  "subdir": "linux-64",
+  "timestamp": 1746022715000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/xcb-util-renderutil-0.3.10-h5eee18b_0.conda",
+  "version": "0.3.10"
+}

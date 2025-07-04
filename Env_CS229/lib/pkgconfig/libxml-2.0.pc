@@ -1,0 +1,13 @@
+prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+modules=1
+
+Name: libXML
+Version: 2.13.8
+Description: libXML library version2.
+Requires.private:  icu-i18n
+Libs: -L${libdir} -lxml2 
+Libs.private:  -L/home/vedant/Codes&Projects/CS229/Env_CS229/lib -lz -L/home/vedant/Codes&Projects/CS229/Env_CS229/lib -llzma  -L/home/vedant/Codes&Projects/CS229/Env_CS229/lib  -lm   
+Cflags: -I${includedir}/libxml2 -I/home/vedant/Codes&Projects/CS229/Env_CS229/include 

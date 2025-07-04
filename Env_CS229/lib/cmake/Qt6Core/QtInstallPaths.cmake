@@ -1,0 +1,16 @@
+# install layout information, following what qmake -query provides
+get_filename_component(QT6_INSTALL_PREFIX
+    ${CMAKE_CURRENT_LIST_DIR}/../../../ ABSOLUTE)
+set(QT6_INSTALL_ARCHDATA "lib/qt6")
+set(QT6_INSTALL_BINS "lib/qt6/bin")
+set(QT6_INSTALL_CONFIGURATION "etc/xdg")
+set(QT6_INSTALL_DATA "share/qt6")
+set(QT6_INSTALL_DOCS "share/doc/qt6")
+set(QT6_INSTALL_EXAMPLES "share/doc/qt6/examples")
+set(QT6_INSTALL_HEADERS "include/qt6")
+set(QT6_INSTALL_LIBS "lib")
+set(QT6_INSTALL_LIBEXECS "lib/qt6")
+set(QT6_INSTALL_PLUGINS "lib/qt6/plugins")
+set(QT6_INSTALL_QML "lib/qt6/qml")
+set(QT6_INSTALL_TESTS "tests")
+set(QT6_INSTALL_TRANSLATIONS "share/qt6/translations")

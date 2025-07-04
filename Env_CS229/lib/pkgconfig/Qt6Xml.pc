@@ -1,0 +1,13 @@
+prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
+exec_prefix=${prefix}
+bindir=${prefix}/lib/qt6/bin
+libexecdir=${prefix}/lib/qt6
+libdir=${prefix}/lib
+includedir=${prefix}/include/qt6
+
+Name: Qt6 Xml
+Description: Qt Xml module
+Version: 6.7.3
+Libs: -L${libdir} -lQt6Xml
+Cflags: -I${includedir}/QtXml -I${includedir} -DQT_XML_LIB
+Requires: Qt6Core

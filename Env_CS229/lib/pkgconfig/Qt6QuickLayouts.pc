@@ -1,0 +1,13 @@
+prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
+exec_prefix=${prefix}
+bindir=${prefix}/lib/qt6/bin
+libexecdir=${prefix}/lib/qt6
+libdir=${prefix}/lib
+includedir=${prefix}/include/qt6
+
+Name: Qt6 QuickLayouts
+Description: Qt QuickLayouts module
+Version: 6.7.3
+Libs: -L${libdir} -lQt6QuickLayouts
+Cflags: -I${includedir}/QtQuickLayouts -I${includedir} -DQT_QUICKLAYOUTS_LIB
+Requires: Qt6Core Qt6Gui Qt6Quick Qt6Qml

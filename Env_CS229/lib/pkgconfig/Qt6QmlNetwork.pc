@@ -1,0 +1,13 @@
+prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
+exec_prefix=${prefix}
+bindir=${prefix}/lib/qt6/bin
+libexecdir=${prefix}/lib/qt6
+libdir=${prefix}/lib
+includedir=${prefix}/include/qt6
+
+Name: Qt6 QmlNetwork
+Description: Qt QmlNetwork module
+Version: 6.7.3
+Libs: -L${libdir} -lQt6QmlNetwork
+Cflags: -I${includedir}/QtQmlNetwork -I${includedir} -DQT_QMLNETWORK_LIB
+Requires: Qt6Core Qt6Network Qt6Qml

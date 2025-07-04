@@ -1,0 +1,7 @@
+
+datadir=/home/vedant/Codes&Projects/CS229/Env_CS229/share
+xkb_base=/home/vedant/Codes&Projects/CS229/Env_CS229/share/X11/xkb
+
+Name: XKeyboardConfig
+Description: X Keyboard configuration data
+Version: 2.44

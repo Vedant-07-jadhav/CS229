@@ -1,0 +1,7 @@
+prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
+includedir=${prefix}/include
+ 
+Name: BigReqsProto
+Description: BigReqs extension headers
+Version: 1.1.2
+Cflags: -I${includedir}

@@ -1,0 +1,13 @@
+prefix=/home/vedant/Codes&Projects/CS229/Env_CS229
+exec_prefix=${prefix}
+bindir=${prefix}/lib/qt6/bin
+libexecdir=${prefix}/lib/qt6
+libdir=${prefix}/lib
+includedir=${prefix}/include/qt6
+
+Name: Qt6 Svg
+Description: Qt Svg module
+Version: 6.7.3
+Libs: -L${libdir} -lQt6Svg
+Cflags: -I${includedir}/QtSvg -I${includedir} -DQT_SVG_LIB
+Requires: Qt6Core Qt6Gui
