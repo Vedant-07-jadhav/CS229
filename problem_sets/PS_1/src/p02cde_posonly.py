@@ -39,7 +39,7 @@ def main(train_path, valid_path, test_path, pred_path):
     model_t.fit(x_train, t_train)
 
     x_test, t_test = util.load_dataset(test_path, label_col='t',add_intercept=True)
-    util.plot(x_test, t_test, model_t.theta, 'output/p02c.png')
+    util.plot(x_test, t_test, model_t.theta, '/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/output/p02c.png')
 
     t_pred = model_t.predict(x_test)
     np.savetxt(pred_path_c, t_pred > 0.5, fmt='%d')
@@ -50,7 +50,7 @@ def main(train_path, valid_path, test_path, pred_path):
     model_y.fit(x_train, y_train)
 
     x_test, y_test = util.load_dataset(test_path, add_intercept=True)
-    util.plot(x_test, y_test, model_y.theta, 'output/p02d.png')
+    util.plot(x_test, y_test, model_y.theta, '/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/output/p02d.png')
 
     y_pred = model_y.predict(x_test)
     np.savetxt(pred_path_d, y_pred> 0.5, fmt='%d')
@@ -59,10 +59,10 @@ def main(train_path, valid_path, test_path, pred_path):
     x_val, y_val = util.load_dataset(valid_path, label_col='y', add_intercept=True)
     alpha = np.mean(model_y.predict(x_val))
     correction = 1 + np.log(2 / alpha - 1) / model_y.theta[0]
-    util.plot(x_test, t_test, model_y.theta, 'output/p02e.png', correction)
+    util.plot(x_test, t_test, model_y.theta, '/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/output/p02e.png', correction)
 
     t_pred_e = y_pred / alpha
     np.savetxt(pred_path_e, t_pred_e > 0.5, fmt='%d')
     # *** END CODER HERE
 
-    main('problem_sets/PS_1/data/ds3_test.csv', 'problem_sets/PS_1/data/ds3_valid.csv', 'problem_sets/PS_1/data/ds3_train.csv', 'problem_sets/PS_1/output')
+main('/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/data/ds3_test.csv', '/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/data/ds3_valid.csv', '/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/data/ds3_train.csv', '/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/output/pred_Ques_2/p02X_pred.txt')
