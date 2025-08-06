@@ -1,5 +1,6 @@
 import numpy as np
 import util
+import matplotlib.pyplot as plt
 
 from linear_model import LinearModel
 
@@ -18,9 +19,22 @@ def main(lr, train_path, eval_path, pred_path):
     # The line below is the original one from Stanford. It does not include the intercept, but this should be added.
     # x_train, y_train = util.load_dataset(train_path, add_intercept=False)
 
+
     # *** START CODE HERE ***
     # Fit a Poisson Regression model
+    model = PoissonRegression(step_size=lr, eps=1e-5)
+    model.fit(x_train, y_train)
+    x_eval, y_eval = util.load_dataset(eval_path, add_intercept=True)
+    y_pred = model.predict(x_eval)
+    np.savetxt(pred_path, y_pred)
+
+    plt.figure()
+    plt.plot(y_eval, y_pred, 'bx')
+    plt.xlabel('true counts')
+    plt.ylabel('predict counts')
+    plt.savefig('/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/output/p03d.png')
     # Run on the validation set, and use np.savetxt to save outputs to pred_path
+
     # *** END CODE HERE ***
 
 
@@ -41,6 +55,13 @@ class PoissonRegression(LinearModel):
             y: Training example labels. Shape (m,).
         """
         # *** START CODE HERE ***
+        m, n = x.shape
+        self.theta = np.zeros(n)
+        while True:
+            old_theta = np.copy(self.theta)
+            self.theta += self.step_size * x.T.dot(y - np.exp(x.dot(self.theta))) / m
+            if np.linalg.norm(self.theta-old_theta, ord=1) < self.eps:
+                break
         # *** END CODE HERE ***
 
     def predict(self, x):
@@ -53,4 +74,6 @@ class PoissonRegression(LinearModel):
             Floating-point prediction for each input, shape (m,).
         """
         # *** START CODE HERE ***
+        return np.exp(x.dot(self.theta))
         # *** END CODE HERE ***
+main(train_path='/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/data/ds4_train.csv', pred_path='/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/output/pred_ques3/p03X_pred.txt', eval_path='/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/data/ds4_valid.csv', lr=1e-8)
