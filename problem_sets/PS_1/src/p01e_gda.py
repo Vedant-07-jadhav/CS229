@@ -22,6 +22,9 @@ def main(train_path, eval_path, pred_path):
     x_eval, y_eval = util.load_dataset(eval_path, add_intercept=True)
     y_pred = model.predict(x_eval)
     np.savetxt(pred_path, y_pred > 0.5, fmt='%d')
+    accuracy = np.mean((y_pred > 0.5) == y_eval)
+    print(f'Validation accuracy: {accuracy:.4f}')
+
     # *** END CODE HERE ***
 
 
@@ -35,31 +38,23 @@ class GDA(LinearModel):
     """
 
     def fit(self, x, y):
-        """Fit a GDA model to training set given by x and y.
+        m, n = x.shape
+        self.theta = np.zeros(n + 1)
 
-        Args:
-            x: Training example inputs. Shape (m, n).
-            y: Training example labels. Shape (m,).
+        phi = np.mean(y)
+        mu_0 = np.mean(x[y == 0], axis=0)
+        mu_1 = np.mean(x[y == 1], axis=0)
 
-        Returns:
-            theta: GDA model parameters.
-        """
-        # *** START CODE HERE ***
-        m, n = self.x.shape
-        self.theta = np.zeros(n+1)
-
-        y_1 = sum(y == 1)
-        phi = y_1/m
-        mu_0 = np.sum(x[y==0], axis=0)/(m-y_1)
-        mu_1 = np.sum(x[y==1], axis=0)/ y_1
-        sigma = ((x[y == 0] - mu_0).T.dot(x[y == 0] - mu_0) + (x[y == 1] - mu_1).T.dot(x[y == 1] - mu_1)) / m
+        x_0 = x[y == 0] - mu_0
+        x_1 = x[y == 1] - mu_1
+        sigma = (x_0.T @ x_0 + x_1.T @ x_1) / m
 
         sigma_inv = np.linalg.inv(sigma)
-        self.theta[0] = 0.5 * (mu_0 + mu_1).dot(sigma_inv).dot(mu_0 - mu_1) - np.log((1 - phi) / phi)
-        self.theta[1:] = sigma_inv.dot(mu_1 - mu_0)
-        return self.theta
 
-        # *** END CODE HERE ***
+        self.theta[1:] = sigma_inv @ (mu_1 - mu_0)
+        self.theta[0] = -0.5 * mu_0 @ sigma_inv @ mu_0 + 0.5 * mu_1 @ sigma_inv @ mu_1 + np.log(phi / (1 - phi))
+
+        return self.theta
 
     def predict(self, x):
         """Make a prediction given new inputs x.
@@ -71,5 +66,8 @@ class GDA(LinearModel):
             Outputs of shape (m,).
         """
         # *** START CODE HERE ***
+
         return 1 / (1 + np.exp(-x.dot(self.theta)))
         # *** END CODE HERE
+
+main(train_path='/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/data/ds1_train.csv', eval_path='/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/data/ds1_valid.csv',pred_path='/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/output/pred_ques3/p01e_pred.txt')
