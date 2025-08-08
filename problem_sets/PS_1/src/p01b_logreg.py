@@ -20,7 +20,7 @@ def main(train_path, eval_path, pred_path):
     model.fit(x_train, y_train)
     
     # Plot data and decision boundary
-    util.plot(x_train, y_train, model.theta, 'output/p01b_{}.png'.format(pred_path[-5]))
+    util.plot(x_train, y_train, model.theta, '/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/output/p01b_{}.png'.format(pred_path[-5]))
 
     # Save predictions
     x_eval, y_eval = util.load_dataset(eval_path, add_intercept=True)
@@ -79,3 +79,5 @@ class LogisticRegression(LinearModel):
         # *** START CODE HERE ***
         return 1 / (1 + np.exp(-x.dot(self.theta)))
         # *** END CODE HERE ***
+
+main(train_path='/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/data/ds1_train.csv', eval_path='/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/data/ds1_valid.csv', pred_path='/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/output/Pred_ques_1/p01b_pred.txt')

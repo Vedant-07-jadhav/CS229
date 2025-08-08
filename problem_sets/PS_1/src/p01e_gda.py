@@ -70,4 +70,4 @@ class GDA(LinearModel):
         return 1 / (1 + np.exp(-x.dot(self.theta)))
         # *** END CODE HERE
 
-main(train_path='/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/data/ds1_train.csv', eval_path='/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/data/ds1_valid.csv',pred_path='/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/output/Pred_ques_1e/p01e_pred.txt')
+main(train_path='/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/data/ds1_train.csv', eval_path='/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/data/ds1_valid.csv', pred_path='/home/vedant/Codes&Projects/CS229/problem_sets/PS_1/output/Pred_ques_1/p01e_pred.txt')
