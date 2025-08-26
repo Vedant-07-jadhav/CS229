@@ -1,0 +1,9 @@
+name: cs229
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - matplotlib
+  - scipy
