@@ -16,6 +16,8 @@ def initial_state():
     """
 
     # *** START CODE HERE ***
+    bita = []
+    return bita
     # *** END CODE HERE ***
 
 
@@ -33,6 +35,7 @@ def predict(state, kernel, x_i):
         Returns the prediction (i.e 0 or 1)
     """
     # *** START CODE HERE ***
+    return sign(np.sum(state * kernel(x, x_i) for state, x in state))
     # *** END CODE HERE ***
 
 
@@ -47,6 +50,8 @@ def update_state(state, kernel, learning_rate, x_i, y_i):
         y_i: A 0 or 1 indicating the label for a single instance
     """
     # *** START CODE HERE ***
+    beta = learning_rate * (y_i - sign(np.sum(state * kernel(x, x_i) for state, x in state)))
+    state.append((beta, x_i))
     # *** END CODE HERE ***
 
 
