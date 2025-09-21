@@ -1,2 +1,2 @@
 # CS229 
-All the materials that i used during studying CS229 machine learning course
+All the materials that I used during studying CS229 machine learning course
