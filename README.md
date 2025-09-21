@@ -1,2 +1,2 @@
 # CS229 
-Problem_sets solve by me 
+All the materials that i used during studying CS229 machine learning course
