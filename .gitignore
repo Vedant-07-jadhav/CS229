@@ -69,21 +69,9 @@ env/
 env.bak/
 venv.bak/
 
-# Data files
-*.csv
-*.tsv
-*.dat
-*.db
-*.sqlite
-*.h5
 
-# Logs
-*.log
 
-# Matplotlib figures
-*.png
-*.pdf
-*.svg
+
 
 # Temporary files
 *.tmp
@@ -91,14 +79,3 @@ venv.bak/
 *.bak
 *~
 
-# Latex
-*.aux
-*.out
-*.toc
-*.log
-*.pdf
-
-# Ignore model checkpoints and outputs
-checkpoints/
-outputs/
-models/
