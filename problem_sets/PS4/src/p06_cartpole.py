@@ -126,6 +126,10 @@ def choose_action(state, mdp_data):
     """
 
     # *** START CODE HERE ***
+    score0 = np.sum(mdp_data['transition_probs'][state, :, 0] * mdp_data['value'])
+    score1 = np.sum(mdp_data['transition_probs'][state, :, 1] * mdp_data['value'])
+    action = 1 if score1 > score0 else 0
+    return action
     # *** END CODE HERE ***
 
 def update_mdp_transition_counts_reward_counts(mdp_data, state, action, new_state, reward):
@@ -150,6 +154,10 @@ def update_mdp_transition_counts_reward_counts(mdp_data, state, action, new_stat
     """
 
     # *** START CODE HERE ***
+    mdp_data['transition_counts'][state, new_state, action] +=1
+    if reward == -1:
+        mdp_data['reward_counts'][new_state, 0]+=1
+    mdp_data['reward_counts'][new_state, 1]+=1
     # *** END CODE HERE ***
 
     # This function does not return anything
@@ -173,6 +181,15 @@ def update_mdp_transition_probs_reward(mdp_data):
     """
 
     # *** START CODE HERE ***
+    for s in range(mdp_data['num_states']):
+        for a in range(2):  # Two actions: 0 and 1
+            total = np.sum(mdp_data['transition_counts'][s, :, a])
+            if total > 0:
+                mdp_data['transition_probs'][s, :, a] = mdp_data['transition_counts'][s, :, a] / total
+    for s in range(mdp_data['num_states']):
+        total_visits = mdp_data['reward_counts'][s, 1]
+        if total_visits > 0:
+            mdp_data['reward'][s] = -mdp_data['reward_counts'][s, 0] / total_visits
     # *** END CODE HERE ***
 
     # This function does not return anything
@@ -199,11 +216,17 @@ def update_mdp_value(mdp_data, tolerance, gamma):
     """
 
     # *** START CODE HERE ***
+    prev_value = mdp_data['value'].copy()
+    score0 = mdp_data['transition_probs'][:, :, 0].dot(mdp_data['value'])
+    score1 = mdp_data['transition_probs'][:, :, 1].dot(mdp_data['value'])
+    mdp_data['value'] = mdp_data['reward'] + (gamma * np.maximum(score1, score0))
+    if np.linalg.norm(mdp_data['value']-prev_value) < tolerance: return True
+    return False
     # *** END CODE HERE ***
 
 def main(plot=True):
     # Seed the randomness of the simulation so this outputs the same thing each time
-    seed = 0
+    seed = 3
     np.random.seed(seed)
 
     # Simulation parameters
